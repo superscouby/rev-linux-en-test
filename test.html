@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Utilisateurs et Groupes Linux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue dans le Monde Ludique des Commandes Linux</h1>
+        <p>Découvrez comment gérer les utilisateurs, les groupes et les permissions avec style !</p>
+    </header>
+    <main>
+        <section id="group-management">
+            <h2>Gestion des Groupes</h2>
+            <img src="./illustration/images (1).jpg" alt="Illustration coquine 1">
+            <table>
+                <tr>
+                    <th>Commande</th>
+                    <th>Description</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><code>groupadd</code></td>
+                    <td>Crée un nouveau groupe sur le système.</td>
+                    <td><code>sudo groupadd dev_juniors</code></td>
+                </tr>
+                <tr>
+                    <td><code>groupdel</code></td>
+                    <td>Supprime un groupe existant.</td>
+                    <td><code>sudo groupdel dev_juniors</code></td>
+                </tr>
+                <tr>
+                    <td><code>getent group</code></td>
+                    <td>Affiche les informations sur un groupe.</td>
+                    <td><code>getent group dev_juniors</code></td>
+                </tr>
+            </table>
+        </section>
+        <section id="user-management">
+            <h2>Gestion des Utilisateurs</h2>
+            <img src="./illustration/images (2).jpg" alt="Illustration coquine 2">
+            <table>
+                <tr>
+                    <th>Commande</th>
+                    <th>Description</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><code>adduser</code></td>
+                    <td>Ajoute un nouvel utilisateur au système.</td>
+                    <td><code>sudo adduser bernard.peur</code></td>
+                </tr>
+                <tr>
+                    <td><code>deluser</code></td>
+                    <td>Supprime un utilisateur du système.</td>
+                    <td><code>sudo deluser bernard.peur</code></td>
+                </tr>
+                <tr>
+                    <td><code>usermod -aG</code></td>
+                    <td>Ajoute un utilisateur à un groupe.</td>
+                    <td><code>sudo usermod -aG dev_juniors bernard.peur</code></td>
+                </tr>
+            </table>
+        </section>
+        <section id="permissions-management">
+            <h2>Gestion des Permissions</h2>
+            <img src="./illustration/images.jpg" alt="Illustration coquine 3">
+            <table>
+                <tr>
+                    <th>Commande</th>
+                    <th>Description</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><code>chown</code></td>
+                    <td>Change le propriétaire d'un fichier ou répertoire.</td>
+                    <td><code>sudo chown :dev_seniors /var/www/html/index.html</code></td>
+                </tr>
+                <tr>
+                    <td><code>chmod</code></td>
+                    <td>Modifie les permissions d'un fichier ou répertoire.</td>
+                    <td><code>sudo chmod 640 /var/www/html/index.html</code></td>
+                </tr>
+                <tr>
+                    <td><code>setfacl</code></td>
+                    <td>Ajoute des permissions ACL.</td>
+                    <td><code>sudo setfacl -m g:dev_juniors:r /var/www/html/index.html</code></td>
+                </tr>
+            </table>
+        </section>
+        <section id="numeric-permissions">
+            <h2>Explication des Permissions Numériques</h2>
+            <img src="./illustration/télécharger (1).jpg" alt="Illustration coquine 4">
+            <p>Les permissions numériques permettent de représenter facilement les droits d'accès :</p>
+            <table>
+                <tr>
+                    <th>Permission</th>
+                    <th>Binaire</th>
+                    <th>Numérique</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Lecture</td>
+                    <td>100</td>
+                    <td>4</td>
+                    <td>Lire le contenu.</td>
+                </tr>
+                <tr>
+                    <td>Écriture</td>
+                    <td>010</td>
+                    <td>2</td>
+                    <td>Modifier le contenu.</td>
+                </tr>
+                <tr>
+                    <td>Exécution</td>
+                    <td>001</td>
+                    <td>1</td>
+                    <td>Exécuter un fichier ou traverser un répertoire.</td>
+                </tr>
+                <tr>
+                    <td>Lecture + Écriture</td>
+                    <td>110</td>
+                    <td>6</td>
+                    <td>Lire et modifier le contenu.</td>
+                </tr>
+                <tr>
+                    <td>Lecture + Exécution</td>
+                    <td>101</td>
+                    <td>5</td>
+                    <td>Lire et exécuter.</td>
+                </tr>
+                <tr>
+                    <td>Lecture + Écriture + Exécution</td>
+                    <td>111</td>
+                    <td>7</td>
+                    <td>Toutes les permissions.</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Guide Ludique des Commandes Linux</p>
+    </footer>
+</body>
+</html>
