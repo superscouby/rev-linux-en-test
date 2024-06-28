@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutoriel Xivo - Style Futuriste</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -100,11 +101,28 @@
             margin: 0;
             font-size: 0.9em;
         }
+        *{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    text-decoration: none;
+}
+.closelist{
+    display: none;
+}
     </style>
 </head>
 <body>
     <header>
         <h1>Tutoriel Xivo</h1>
+        <nav>
+            <div class="iconlist close"></div>
+            <ul class="navlist closelist">
+                <li><a href="./index.html">ACCEUIL</a></li>
+                <li><a href="./XIVO.html">BIENVENU SUR XIVO</a></li>
+                
+            </ul>   
+        </nav>
         <nav>
             <ul>
                 <li><a href="#presentation">Présentation</a></li>
@@ -161,6 +179,7 @@ apt-get upgrade</code></pre>
     </main>
     <footer>
         <p>&copy; 2024 Tutoriel Xivo. Tous droits réservés.</p>
+        <script src="./action.js"></script>
     </footer>
 </body>
 </html>
