@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriel Xivo - Style Futuriste</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1d1f26;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0f1116;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            border-bottom: 1px solid #2b2d35;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        main {
+            margin-top: 80px; /* Adjust according to header height */
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0f1116;
+            color: #ffffff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tutoriel Xivo</h1>
+        <nav>
+            <ul>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#configuration">Configuration</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="presentation">
+            <h2>Présentation de Xivo</h2>
+            <p>Xivo est l’une des distributions Linux dédiées à Asterisk, intégrant de base Asterisk ainsi que certains modules complémentaires et une interface Web par défaut. C’est une solution Open Source publiée sous licence GPLv3, idéale pour les entreprises.</p>
+            <h3>Avantages de Xivo</h3>
+            <ul>
+                <li>Installation très simple</li>
+                <li>Interface Web de qualité</li>
+                <li>Modules et fonctionnalités additionnels par défaut</li>
+            </ul>
+            <h3>Distributions similaires</h3>
+            <ul>
+                <li>FreePBX</li>
+                <li>AsteriskNow</li>
+                <li>Elastix</li>
+                <li>TrixBox</li>
+            </ul>
+        </section>
+        <section id="installation">
+            <h2>Installation de Xivo</h2>
+            <p>Pour installer Xivo, téléchargez l’ISO depuis leur site web et suivez les étapes simples d'installation.</p>
+            <ol>
+                <li>Téléchargez l'ISO de Xivo depuis le site officiel.</li>
+                <li>Créez une clé USB bootable ou gravez l'ISO sur un DVD.</li>
+                <li>Démarrez à partir de la clé USB ou du DVD.</li>
+                <li>Suivez les instructions à l'écran pour installer Xivo.</li>
+                <li>Choisissez une IP pour accéder à l'interface Web.</li>
+                <li>Une fois l'installation terminée, mettez à jour le système avec les commandes suivantes :</li>
+            </ol>
+            <pre><code>apt-get update
+apt-get upgrade</code></pre>
+        </section>
+        <section id="configuration">
+            <h2>Configuration Initiale de Xivo</h2>
+            <p>Après l'installation de Xivo, vous pouvez accéder à l'interface Web via l'IP choisie pendant l'installation.</p>
+            <ol>
+                <li>Accédez à l'interface Web de Xivo en utilisant l'IP du serveur.</li>
+                <li>Choisissez la langue, de préférence l'anglais pour plus de documentation.</li>
+                <li>Acceptez la licence.</li>
+                <li>Remplissez les champs de la page de configuration (nom de l'entreprise, contexte des appels internes, etc.).</li>
+                <li>Vérifiez le résumé de la configuration.</li>
+                <li>Xivo génère alors la configuration de base. Vous serez redirigé vers la page de login.</li>
+                <li>Connectez-vous pour accéder à la page d'accueil de Xivo où vous pouvez surveiller l'état du système et configurer les services IPBX.</li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tutoriel Xivo. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
